@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Application xmlns="http://xmlns.oracle.com/adfm/application" version="11.1.1.61.92" id="DataBindings" SeparateXMLFiles="false"
+             Package="de.hahn.blog.accessresourcesfrompath.view"
+             ClientType="Generic">
+  <pageMap>
+    <page path="/ShowProperty.jspx" usageId="de_hahn_blog_accessresourcesfrompath_view_ShowPropertyPageDef"/>
+  </pageMap>
+  <pageDefinitionUsages>
+    <page id="de_hahn_blog_accessresourcesfrompath_view_ShowPropertyPageDef" path="de.hahn.blog.accessresourcesfrompath.view.pageDefs.ShowPropertyPageDef"/>
+  </pageDefinitionUsages>
+  <dataControlUsages>
+    <BC4JDataControl id="BARFPAppModuleDataControl" Package="de.hahn.blog.accessresourcesfrompath.model.facade"
+                     FactoryClass="oracle.adf.model.bc4j.DataControlFactoryImpl" SupportsTransactions="true" SupportsFindMode="true" SupportsRangesize="true"
+                     SupportsResetState="true" SupportsSortCollection="true" Configuration="BARFPAppModuleLocal" syncMode="Immediate"
+                     xmlns="http://xmlns.oracle.com/adfm/datacontrol"/>
+  </dataControlUsages>
+</Application>

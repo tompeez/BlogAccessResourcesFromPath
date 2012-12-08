@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE JboProject SYSTEM "jbo_03_01.dtd">
+<!---->
+<JboProject
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="BARFPModel"
+  Version="11.1.1.61.92"
+  SeparateXMLFiles="true"
+  PackageName="de.hahn.blog.accessresourcesfrompath.model">
+  <DesignTime>
+    <Attr Name="_jprName" Value="../../../../../../BARFPModel.jpr"/>
+    <Attr Name="_NamedConnection" Value="HR"/>
+    <Attr Name="_appModuleNames0" Value="de.hahn.blog.accessresourcesfrompath.model.facade.BARFPAppModule"/>
+  </DesignTime>
+  <Containee
+    Name="businessobjectes"
+    PackageName="de.hahn.blog.accessresourcesfrompath.model.businessobjectes"
+    ObjectType="JboPackage">
+    <DesignTime>
+      <Attr Name="_EO" Value="true"/>
+      <Attr Name="_AS" Value="true"/>
+    </DesignTime>
+  </Containee>
+  <Containee
+    Name="dataaccess"
+    PackageName="de.hahn.blog.accessresourcesfrompath.model.dataaccess"
+    ObjectType="JboPackage">
+    <DesignTime>
+      <Attr Name="_VO" Value="true"/>
+      <Attr Name="_VL" Value="true"/>
+    </DesignTime>
+  </Containee>
+  <Containee
+    Name="facade"
+    PackageName="de.hahn.blog.accessresourcesfrompath.model.facade"
+    ObjectType="JboPackage">
+    <DesignTime>
+      <Attr Name="_AM" Value="true"/>
+    </DesignTime>
+  </Containee>
+</JboProject>

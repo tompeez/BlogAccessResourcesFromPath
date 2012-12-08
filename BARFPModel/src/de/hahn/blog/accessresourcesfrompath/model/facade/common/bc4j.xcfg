@@ -1,0 +1,12 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<BC4JConfig version="11.1" xmlns="http://xmlns.oracle.com/bc4j/configuration">
+   <AppModuleConfigBag ApplicationName="de.hahn.blog.accessresourcesfrompath.model.facade.BARFPAppModule">
+      <AppModuleConfig name="BARFPAppModuleLocal" ApplicationName="de.hahn.blog.accessresourcesfrompath.model.facade.BARFPAppModule" DeployPlatform="LOCAL" JDBCName="HR" jbo.project="de.hahn.blog.accessresourcesfrompath.model.BARFPModel">
+         <Security AppModuleJndiName="de.hahn.blog.accessresourcesfrompath.model.facade.BARFPAppModule"/>
+      </AppModuleConfig>
+      <AppModuleConfig name="BARFPAppModuleShared" ApplicationName="de.hahn.blog.accessresourcesfrompath.model.facade.BARFPAppModule" DeployPlatform="LOCAL" JDBCName="HR" jbo.project="de.hahn.blog.accessresourcesfrompath.model.BARFPModel">
+         <AM-Pooling jbo.ampool.maxpoolsize="1" jbo.ampool.isuseexclusive="false"/>
+         <Security AppModuleJndiName="de.hahn.blog.accessresourcesfrompath.model.facade.BARFPAppModule"/>
+      </AppModuleConfig>
+   </AppModuleConfigBag>
+</BC4JConfig>

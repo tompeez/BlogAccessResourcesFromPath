@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="11.1.1.61.92" id="ShowPropertyPageDef"
+                Package="de.hahn.blog.accessresourcesfrompath.view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables">
+      <variable Type="java.lang.String" Name="getModelResource_return" IsQueriable="false" IsUpdateable="0" DefaultValue="${bindings.getModelResource.result}"/>
+      <variable Type="java.lang.String" Name="getModelResource_key" IsQueriable="false"/>
+      <variable Name="ViewResourceKey" Type="java.lang.String"/>
+      <variable Name="ViewResourceValue" Type="java.lang.String"/>
+    </variableIterator>
+  </executables>
+  <bindings>
+    <methodAction id="getModelResource" RequiresUpdateModel="true" Action="invokeMethod" MethodName="getModelResource" IsViewObjectMethod="false"
+                  DataControl="BARFPAppModuleDataControl" InstanceName="BARFPAppModuleDataControl.dataProvider"
+                  ReturnName="data.BARFPAppModuleDataControl.methodResults.getModelResource_BARFPAppModuleDataControl_dataProvider_getModelResource_result">
+      <NamedData NDName="key" NDType="java.lang.String" NDValue="${bindings.getModelResource_key}"/>
+    </methodAction>
+    <attributeValues IterBinding="variables" id="key">
+      <AttrNames>
+        <Item Value="getModelResource_key"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="variables" id="return">
+      <AttrNames>
+        <Item Value="getModelResource_return"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="variables" id="ViewResourceKey1">
+      <AttrNames>
+        <Item Value="ViewResourceKey"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="variables" id="ViewResourceValue1">
+      <AttrNames>
+        <Item Value="ViewResourceValue"/>
+      </AttrNames>
+    </attributeValues>
+  </bindings>
+</pageDefinition>

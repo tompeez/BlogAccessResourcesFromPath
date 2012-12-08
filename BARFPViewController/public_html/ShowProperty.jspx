@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1" xmlns:f="http://java.sun.com/jsf/core" xmlns:h="http://java.sun.com/jsf/html"
+          xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+  <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+  <f:view>
+    <af:document id="d1">
+      <af:messages id="m1"/>
+      <af:form id="f1">
+        <af:panelStretchLayout topHeight="50px" id="psl1">
+          <f:facet name="top">
+            <af:outputText value="Show Property" id="ot1" inlineStyle="font-size:x-large;"/>
+          </f:facet>
+          <f:facet name="center">
+            <af:panelGroupLayout id="pgl1" styleClass="AFStretchWidth">
+              <af:panelFormLayout id="pfl1">
+                <af:inputText value="#{bindings.key.inputValue}" label="Model Key" required="#{bindings.key.hints.mandatory}"
+                              columns="#{bindings.key.hints.displayWidth}" maximumLength="#{bindings.key.hints.precision}"
+                              shortDesc="#{bindings.key.hints.tooltip}" id="it1">
+                  <f:validator binding="#{bindings.key.validator}"/>
+                </af:inputText>
+                <af:commandButton actionListener="#{bindings.getModelResource.execute}" text="getModelResource"
+                                  disabled="#{!bindings.getModelResource.enabled}" id="cb1" partialSubmit="true"/>
+                <af:outputText value="Model Value: #{bindings.return.inputValue}" id="ot2" partialTriggers="cb1"/>
+              </af:panelFormLayout>
+              <af:panelFormLayout id="pfl2">
+                <af:inputText label="View Key" id="it2" value="#{bindings.ViewResourceKey1.inputValue}"/>
+                <af:commandButton text="getViewReource" id="cb2" actionListener="#{viewScope.ResourceReaderBean.getViewResourceListner}" partialSubmit="true"/>
+                <af:outputText value="View Value: #{bindings.ViewResourceValue1.inputValue}" id="ot3" partialTriggers="cb2"/>
+              </af:panelFormLayout>
+            </af:panelGroupLayout>
+            <!-- id="af_one_column_header_stretched"  -->
+          </f:facet>
+        </af:panelStretchLayout>
+      </af:form>
+    </af:document>
+  </f:view>
+  <!--oracle-jdev-comment:preferred-managed-bean-name:ResourceReaderBean-->
+</jsp:root>
